@@ -353,6 +353,10 @@ code, .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; 
 .vocab dt { font-weight: 700; }
 .vocab dd { margin: 0; color: var(--suave); }
 
+.ejemplo-app { margin: 24px 0 0; padding: 0; overflow: hidden; }
+.ejemplo-app-scroll { overflow-x: auto; }
+.ejemplo-app img { display: block; width: 100%; min-width: 640px; height: auto; }
+
 .empezar {
   margin-top: 16px;
   background: var(--texto);

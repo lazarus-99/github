@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" role="img" aria-label="Organización Data-Base-I-Example: el docente ve todos los repositorios; el repo curso-bd-calificacion crea y califica los repos privados de cada estudiante">
+  <defs>
+    <symbol id="persona" viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="29" fill="#fff" stroke="currentColor" stroke-width="2.5"/>
+      <circle cx="30" cy="23" r="9" fill="currentColor"/>
+      <path d="M14 47a16 13 0 0 1 32 0z" fill="currentColor"/>
+    </symbol>
+    <symbol id="candado" viewBox="0 0 30 34">
+      <path d="M8 15v-5a7 7 0 0 1 14 0v5" fill="none" stroke="currentColor" stroke-width="3.5"/>
+      <rect x="3" y="14" width="24" height="18" rx="4" fill="currentColor"/>
+      <circle cx="15" cy="22" r="2.6" fill="#fff"/>
+      <path d="M15 23v4" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="archivo" viewBox="0 0 16 20">
+      <path d="M2 1h8l4 4v14H2z" fill="#fff" stroke="#6b6f78" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M10 1v4h4" fill="none" stroke="#6b6f78" stroke-width="1.5"/>
+    </symbol>
+    <marker id="f-naranja" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ee6d3c"/></marker>
+    <marker id="f-verde" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#36ab81"/></marker>
+    <marker id="f-azul" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4b73e2"/></marker>
+    <marker id="f-oscuro" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#29303e"/></marker>
+  </defs>
+
+  <rect width="960" height="640" fill="#fbf9f5"/>
+
+  <!-- Título -->
+  <text x="24" y="46" font-size="26" font-weight="800" fill="#29303e">Ejemplo de aplicación</text>
+  <text x="24" y="72" font-size="14" fill="#6b6f78">Curso de Base de Datos I en GitHub</text>
+
+  <!-- Organización (carpeta grande) -->
+  <path d="M24 112a10 10 0 0 1 10-10h330a10 10 0 0 1 9 6l8 18h343a10 10 0 0 1 10 10v478a10 10 0 0 1-10 10H34a10 10 0 0 1-10-10z" fill="#f5f2eb" stroke="#29303e" stroke-width="2.5"/>
+  <text x="44" y="122" font-size="12" font-weight="700" fill="#6b6f78">ORGANIZACIÓN</text>
+  <text x="150" y="122" font-size="15" font-weight="700" fill="#29303e" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">Data-Base-I-Example</text>
+
+  <!-- Repo del curso -->
+  <path d="M50 162a8 8 0 0 1 8-8h120a8 8 0 0 1 7 4l6 10h201a8 8 0 0 1 8 8v384a8 8 0 0 1-8 8H58a8 8 0 0 1-8-8z" fill="#e8edff" stroke="#4b73e2" stroke-width="2.5"/>
+  <text x="70" y="200" font-size="15" font-weight="700" fill="#29303e" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">curso-bd-calificacion</text>
+  <text x="70" y="220" font-size="12" fill="#6b6f78">repositorio del curso · GitHub Actions</text>
+
+  <!-- Archivos del curso -->
+  <rect x="70" y="234" width="146" height="44" rx="8" fill="#fff" stroke="#c9d3f5" stroke-width="1.5"/>
+  <use href="#archivo" x="80" y="246" width="14" height="18"/>
+  <text x="101" y="253" font-size="12" font-weight="700" fill="#29303e" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">estudiantes.csv</text>
+  <text x="101" y="269" font-size="10.5" fill="#6b6f78">lista de estudiantes</text>
+  <rect x="226" y="234" width="146" height="44" rx="8" fill="#fff" stroke="#c9d3f5" stroke-width="1.5"/>
+  <use href="#archivo" x="236" y="246" width="14" height="18"/>
+  <text x="257" y="253" font-size="12" font-weight="700" fill="#29303e" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">notas.csv</text>
+  <text x="257" y="269" font-size="10.5" fill="#6b6f78">notas de cada uno</text>
+
+  <!-- Action 1 -->
+  <rect x="72" y="292" width="300" height="100" rx="10" fill="#fff" stroke="#ee6d3c" stroke-width="2"/>
+  <rect x="72" y="292" width="8" height="100" rx="4" fill="#ee6d3c"/>
+  <circle cx="110" cy="322" r="15" fill="#f8e6db"/>
+  <path d="M105 314l12 8-12 8z" fill="#ee6d3c"/>
+  <text x="134" y="328" font-size="15" font-weight="700" fill="#29303e">Crear repos de tarea</text>
+  <text x="96" y="358" font-size="12" fill="#6b6f78">Lee estudiantes.csv y crea un repo</text>
+  <text x="96" y="375" font-size="12" fill="#6b6f78">privado para cada estudiante</text>
+
+  <!-- Action 2 -->
+  <rect x="72" y="432" width="300" height="100" rx="10" fill="#fff" stroke="#36ab81" stroke-width="2"/>
+  <rect x="72" y="432" width="8" height="100" rx="4" fill="#36ab81"/>
+  <circle cx="110" cy="462" r="15" fill="#e1f4ec"/>
+  <path d="M103 462l5 5 10-10" fill="none" stroke="#36ab81" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="134" y="468" font-size="15" font-weight="700" fill="#29303e">Calificar tareas</text>
+  <text x="96" y="498" font-size="12" fill="#6b6f78">Revisa las consultas SQL y guarda</text>
+  <text x="96" y="515" font-size="12" fill="#6b6f78">la nota en notas.csv</text>
+
+  <!-- Repo estudiante 1 -->
+  <path d="M470 162a8 8 0 0 1 8-8h90a8 8 0 0 1 7 4l6 10h141a8 8 0 0 1 8 8v148a8 8 0 0 1-8 8H478a8 8 0 0 1-8-8z" fill="#fff" stroke="#29303e" stroke-width="2.5"/>
+  <text x="490" y="202" font-size="15" font-weight="700" fill="#29303e" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">estudiante1</text>
+  <use href="#candado" x="680" y="180" width="26" height="30" color="#ee6d3c"/>
+  <text x="693" y="226" font-size="10" font-weight="700" fill="#ee6d3c" text-anchor="middle">privado</text>
+  <use href="#archivo" x="490" y="232" width="14" height="18"/>
+  <text x="512" y="246" font-size="12" fill="#29303e" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">consultas.sql</text>
+  <use href="#archivo" x="490" y="260" width="14" height="18"/>
+  <text x="512" y="274" font-size="12" fill="#29303e" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">README.md</text>
+  <rect x="490" y="292" width="120" height="24" rx="12" fill="#e1f4ec"/>
+  <text x="550" y="308" font-size="11" font-weight="700" fill="#36ab81" text-anchor="middle">nota: 90 / 100</text>
+
+  <!-- Repo estudiante 2 -->
+  <path d="M470 400a8 8 0 0 1 8-8h90a8 8 0 0 1 7 4l6 10h141a8 8 0 0 1 8 8v148a8 8 0 0 1-8 8H478a8 8 0 0 1-8-8z" fill="#fff" stroke="#29303e" stroke-width="2.5"/>
+  <text x="490" y="440" font-size="15" font-weight="700" fill="#29303e" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">estudiante2</text>
+  <use href="#candado" x="680" y="418" width="26" height="30" color="#ee6d3c"/>
+  <text x="693" y="464" font-size="10" font-weight="700" fill="#ee6d3c" text-anchor="middle">privado</text>
+  <use href="#archivo" x="490" y="470" width="14" height="18"/>
+  <text x="512" y="484" font-size="12" fill="#29303e" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">consultas.sql</text>
+  <use href="#archivo" x="490" y="498" width="14" height="18"/>
+  <text x="512" y="512" font-size="12" fill="#29303e" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">README.md</text>
+  <rect x="490" y="530" width="120" height="24" rx="12" fill="#e1f4ec"/>
+  <text x="550" y="546" font-size="11" font-weight="700" fill="#36ab81" text-anchor="middle">nota: 75 / 100</text>
+
+  <!-- Flechas: crear -->
+  <g fill="none" stroke="#ee6d3c" stroke-width="2.5" stroke-dasharray="7 5">
+    <path d="M372 334C420 334 420 220 464 220" marker-end="url(#f-naranja)"/>
+    <path d="M372 348C430 348 410 456 464 456" marker-end="url(#f-naranja)"/>
+  </g>
+  <rect x="396" y="264" width="44" height="22" rx="11" fill="#f5f2eb" stroke="#ee6d3c" stroke-width="1.5"/>
+  <text x="418" y="279" font-size="12" font-weight="700" fill="#ee6d3c" text-anchor="middle">crea</text>
+
+  <!-- Flechas: calificar -->
+  <g fill="none" stroke="#36ab81" stroke-width="2.5">
+    <path d="M372 474C430 474 410 304 464 304" marker-end="url(#f-verde)"/>
+    <path d="M372 488C420 488 420 542 464 542" marker-end="url(#f-verde)"/>
+  </g>
+  <rect x="388" y="504" width="62" height="22" rx="11" fill="#f5f2eb" stroke="#36ab81" stroke-width="1.5"/>
+  <text x="419" y="519" font-size="12" font-weight="700" fill="#36ab81" text-anchor="middle">califica</text>
+
+  <!-- Docente -->
+  <use href="#persona" x="836" y="18" width="64" height="64" color="#4b73e2"/>
+  <text x="868" y="100" font-size="15" font-weight="700" fill="#29303e" text-anchor="middle">Docente</text>
+  <text x="868" y="117" font-size="12" fill="#6b6f78" text-anchor="middle">dueño (owner)</text>
+  <path d="M836 52C770 52 740 70 740 128" fill="none" stroke="#4b73e2" stroke-width="2.5" marker-end="url(#f-azul)"/>
+  <rect x="560" y="38" width="196" height="26" rx="13" fill="#e8edff"/>
+  <text x="658" y="56" font-size="12" font-weight="700" fill="#4b73e2" text-anchor="middle">👁 ve todos los repositorios</text>
+
+  <!-- Estudiantes -->
+  <use href="#persona" x="836" y="210" width="64" height="64" color="#ee6d3c"/>
+  <text x="868" y="292" font-size="14" font-weight="700" fill="#29303e" text-anchor="middle">estudiante1</text>
+  <use href="#persona" x="836" y="448" width="64" height="64" color="#36ab81"/>
+  <text x="868" y="530" font-size="14" font-weight="700" fill="#29303e" text-anchor="middle">estudiante2</text>
+
+  <!-- Acceso a su propio repo -->
+  <path d="M834 242H740" stroke="#29303e" stroke-width="2.5" marker-end="url(#f-oscuro)"/>
+  <path d="M834 480H740" stroke="#29303e" stroke-width="2.5" marker-end="url(#f-oscuro)"/>
+  <circle cx="787" cy="242" r="10" fill="#36ab81"/>
+  <path d="M782 242l3.5 3.5 6.5-7" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="787" cy="480" r="10" fill="#36ab81"/>
+  <path d="M782 480l3.5 3.5 6.5-7" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Sin acceso al repo del compañero -->
+  <g stroke="#b8b2a6" stroke-width="2" stroke-dasharray="4 5" fill="none">
+    <path d="M846 270L742 440"/>
+    <path d="M846 452L742 282"/>
+  </g>
+  <g>
+    <circle cx="810" cy="329" r="11" fill="#f8e6db" stroke="#ee6d3c" stroke-width="2"/>
+    <path d="M805 324l10 10M815 324l-10 10" stroke="#ee6d3c" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="810" cy="393" r="11" fill="#f8e6db" stroke="#ee6d3c" stroke-width="2"/>
+    <path d="M805 388l10 10M815 388l-10 10" stroke="#ee6d3c" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <text x="868" y="356" font-size="11" fill="#6b6f78" text-anchor="middle">sin acceso al</text>
+  <text x="868" y="370" font-size="11" fill="#6b6f78" text-anchor="middle">repo del otro</text>
+
+</svg>
