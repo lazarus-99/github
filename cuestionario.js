@@ -2,7 +2,7 @@ const preguntas = [
   {
     texto: "¿Cómo se llaman las «fotos» que Git toma de tu proyecto?",
     opciones: ["Ramas", "Commits", "Forks"],
-    correcta: 2
+    correcta: 1
   },
   {
     texto: "¿Qué comando sirve para elegir lo que entra en la foto?",
