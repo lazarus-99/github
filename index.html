@@ -3,117 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Git y GitHub en una página</title>
+  <title>Git y GitHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Dibujos reutilizables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="doc" viewBox="0 0 40 50">
+      <g stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M4 2h22l10 10v36H4z"/>
+        <path d="M26 2v10h10" fill="none"/>
+        <path d="M11 26h16M11 33h18M11 40h10" fill="none" opacity=".55"/>
+      </g>
+    </symbol>
+    <symbol id="mini" viewBox="0 0 80 30">
+      <g fill="none" stroke-width="2.5">
+        <path d="M4 23H76" stroke="#4b73e2"/>
+        <path d="M20 23c8 0 8-15 16-15h8c8 0 8 15 16 15" stroke="#ee6d3c"/>
+        <g fill="#fff" stroke="#4b73e2">
+          <circle cx="4" cy="23" r="3"/><circle cx="20" cy="23" r="3"/>
+          <circle cx="60" cy="23" r="3"/><circle cx="76" cy="23" r="3"/>
+        </g>
+        <g fill="#fff" stroke="#ee6d3c"><circle cx="36" cy="8" r="3"/><circle cx="44" cy="8" r="3"/></g>
+      </g>
+    </symbol>
+    <symbol id="nube" viewBox="0 0 140 90">
+      <path d="M32 82h78a24 24 0 0 0 4-47.5A32 32 0 0 0 54 22a24 24 0 0 0-34 21A20 20 0 0 0 32 82z" fill="#e8edff" stroke="#4b73e2" stroke-width="3.5" stroke-linejoin="round"/>
+      <use href="#mini" x="34" y="40" width="72" height="27"/>
+    </symbol>
+    <symbol id="laptop" viewBox="0 0 90 60">
+      <rect x="11" y="2" width="68" height="42" rx="4" fill="#fff" stroke="#29303e" stroke-width="3"/>
+      <path d="M0 48h90l-6 8H6z" fill="#29303e"/>
+      <circle cx="45" cy="17" r="7" fill="currentColor"/>
+      <path d="M31 40a14 12 0 0 1 28 0z" fill="currentColor"/>
+    </symbol>
+    <marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#29303e"/>
+    </marker>
+    <marker id="punta-verde" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#36ab81"/>
+    </marker>
+  </svg>
+
   <main class="contenedor">
-    <header>
-      <h1>Git y GitHub en una página</h1>
-      <p>Cómo guardar la historia de tu trabajo y colaborar con otros, sin saber programar.</p>
+    <header class="cabecera">
+      <div>
+        <h1>Git y GitHub</h1>
+        <p>Cómo guardar la historia de tu trabajo y colaborar con otros, sin saber programar.</p>
+      </div>
+      <svg class="logo" viewBox="0 0 80 30" aria-hidden="true"><use href="#mini"/></svg>
     </header>
 
     <div class="grid">
-      <section class="tarjeta">
+      <!-- 1 -->
+      <section class="tarjeta ancho">
         <h2><span class="num">1</span> Git toma «fotos» de tu proyecto: se llaman commits</h2>
-        <p class="etiqueta">Sin Git</p>
-        <div class="chips">
-          <span class="chip malo">tesis_v2.docx</span>
-          <span class="chip malo">final_FINAL(2).docx</span>
-          <span class="chip malo">tesis_FINAL.docx</span>
+        <div class="s1">
+          <div class="sin-git">
+            <span class="chip cafe">SIN GIT</span>
+            <div class="docs-sueltos">
+              <figure><svg class="doc"><use href="#doc"/></svg><figcaption>tesis_v2.docx</figcaption></figure>
+              <figure><svg class="doc"><use href="#doc"/></svg><figcaption>tesis_FINAL.docx</figcaption></figure>
+              <figure><svg class="doc"><use href="#doc"/></svg><figcaption>final_FINAL(2).docx</figcaption></figure>
+            </div>
+            <p class="pregunta-cafe">¿Cuál es la buena?<br>¿Qué cambió? ¿Quién?</p>
+          </div>
+
+          <div>
+            <div class="con-git-top">
+              <span class="chip azul">CON GIT</span>
+              <span class="partida">🎮&nbsp;como «guardar partida»</span>
+            </div>
+            <div class="linea-tiempo">
+              <div><div class="foto"><div class="pantalla"></div><small>foto 1</small></div><div class="punto"></div><strong>Índice listo</strong><span>Ana · lun</span></div>
+              <div><div class="foto"><div class="pantalla"></div><small>foto 2</small></div><div class="punto"></div><strong>Cap. 1</strong><span>Ana · lun</span></div>
+              <div><div class="foto"><div class="pantalla"></div><small>foto 3</small></div><div class="punto"></div><strong>Gráficos</strong><span>Luis · mar</span></div>
+              <div><div class="foto"><div class="pantalla"></div><small>foto 4</small></div><div class="punto"></div><strong>Citas</strong><span>Ana · mié</span></div>
+              <div><div class="foto"><div class="pantalla"></div><small>foto 5</small></div><div class="punto"></div><strong>Para revisar</strong><span>Luis · jue</span></div>
+            </div>
+            <div class="volver"></div>
+            <p class="volver-texto">¿salió mal? vuelves a cualquier foto anterior</p>
+          </div>
         </div>
-        <p class="nota">¿Cuál es la buena? ¿Qué cambió? ¿Quién?</p>
-        <p class="etiqueta">Con Git</p>
-        <div class="foto">Índice listo <small>· Ana · lun</small></div>
-        <div class="foto">Cap. 1 <small>· Ana · lun</small></div>
-        <div class="foto">Gráficos <small>· Luis · mar</small></div>
-        <p class="nota">🎮 Como «guardar partida»: ¿salió mal? Vuelves a cualquier foto anterior.</p>
       </section>
 
-      <section class="tarjeta">
+      <!-- 2 -->
+      <section class="tarjeta ancho">
         <h2><span class="num">2</span> Cómo se toma una foto: elegir y luego disparar</h2>
         <div class="flujo">
-          <span class="caja"><strong>Tu carpeta</strong><br>donde trabajas</span>
-          <span class="flecha">→</span>
-          <span class="caja"><strong>Preparado</strong><br>lo que entra en la foto</span>
-          <span class="flecha">→</span>
-          <span class="caja"><strong>Historial</strong><br>fotos guardadas</span>
+          <div class="caja beige">
+            <h3>Tu carpeta</h3>
+            <small>donde trabajas</small>
+            <div class="docs">
+              <svg class="doc oscuro"><use href="#doc"/></svg>
+              <svg class="doc naranja"><use href="#doc"/></svg>
+              <svg class="doc verde"><use href="#doc"/></svg>
+              <svg class="doc gris"><use href="#doc"/></svg>
+            </div>
+            <span class="borrador-etq">borrador</span>
+          </div>
+          <div class="flecha"><span class="cmd"><code>git add</code>→ elegir</span></div>
+          <div class="caja amarilla">
+            <h3>Preparado</h3>
+            <small>lo que entra en la foto</small>
+            <div class="preparado">
+              <div class="docs">
+                <svg class="doc oscuro"><use href="#doc"/></svg>
+                <svg class="doc naranja"><use href="#doc"/></svg>
+              </div>
+              <small>el borrador queda afuera</small>
+            </div>
+          </div>
+          <div class="flecha"><span class="cmd"><code>git commit</code>→ tomar la foto</span></div>
+          <div class="caja lavanda">
+            <h3>Historial</h3>
+            <small>fotos guardadas</small>
+            <ul class="historial">
+              <li>Gráficos <span>hoy</span></li>
+              <li>Cap. 1 <span>ayer</span></li>
+              <li>Índice <span>lunes</span></li>
+            </ul>
+          </div>
         </div>
-        <p><code>git add</code> → elegir<br><code>git commit</code> → tomar la foto</p>
-        <p class="nota">El borrador que no eliges queda afuera de la foto.</p>
       </section>
 
+      <!-- 3 -->
       <section class="tarjeta">
         <h2><span class="num">3</span> Ramas: experimentar sin miedo</h2>
-        <p class="etiqueta">main (versión principal)</p>
-        <div class="chips">
-          <span class="chip">Índice</span>
-          <span class="chip">Cap. 1</span>
-          <span class="chip verde">← merge</span>
-        </div>
-        <p class="etiqueta">rama: probando una idea</p>
-        <div class="chips">
-          <span class="chip naranja">Gráficos</span>
-          <span class="chip naranja">Citas</span>
-        </div>
-        <p class="nota">Si la idea funciona, la unes a <strong>main</strong> con un <em>merge</em>. Si no, la descartas y main queda intacta.</p>
+        <svg class="diagrama" viewBox="0 0 380 170" role="img" aria-label="Una rama sale de main, prueba una idea y vuelve a unirse con merge">
+          <rect x="118" y="6" width="160" height="24" rx="12" fill="#f8e6db"/>
+          <text x="198" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#ee6d3c">rama: probando una idea</text>
+          <path d="M180 114c6 30 40 36 78 34" fill="none" stroke="#b8b2a6" stroke-width="2.5" stroke-dasharray="4 5"/>
+          <circle cx="270" cy="148" r="10" fill="#f8e6db" stroke="#ee6d3c" stroke-width="2"/>
+          <path d="M265 143l10 10M275 143l-10 10" stroke="#ee6d3c" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="288" y="152" font-size="11" fill="#6b6f78">idea descartada</text>
+          <path d="M15 110H365" stroke="#4b73e2" stroke-width="5"/>
+          <path d="M75 110c40 0 30-60 75-60h80c45 0 35 60 80 60" fill="none" stroke="#ee6d3c" stroke-width="5"/>
+          <circle cx="310" cy="110" r="18" fill="none" stroke="#36ab81" stroke-width="2.5"/>
+          <g fill="#fff" stroke="#4b73e2" stroke-width="4">
+            <circle cx="15" cy="110" r="8"/><circle cx="75" cy="110" r="8"/><circle cx="180" cy="110" r="8"/>
+            <circle cx="310" cy="110" r="8"/><circle cx="365" cy="110" r="8"/>
+          </g>
+          <g fill="#fff" stroke="#ee6d3c" stroke-width="4"><circle cx="165" cy="50" r="8"/><circle cx="215" cy="50" r="8"/></g>
+          <text x="8" y="92" font-size="12" font-weight="700" fill="#4b73e2">main</text>
+          <text x="310" y="84" text-anchor="middle" font-size="12" font-weight="700" fill="#36ab81">merge</text>
+        </svg>
       </section>
 
+      <!-- 4 -->
       <section class="tarjeta">
         <h2><span class="num">4</span> Git y GitHub no son lo mismo</h2>
         <div class="comparar">
-          <div class="caja"><strong>Git</strong>programa en tu compu</div>
-          <span class="igual">≠</span>
-          <div class="caja"><strong>GitHub</strong>sitio web para compartir</div>
+          <div>
+            <svg viewBox="0 0 140 100" aria-hidden="true">
+              <rect x="18" y="4" width="104" height="66" rx="6" fill="#fff" stroke="#29303e" stroke-width="3.5"/>
+              <path d="M2 76h136l-8 10H10z" fill="#29303e"/>
+              <use href="#mini" x="33" y="22" width="74" height="28"/>
+            </svg>
+            <strong>Git</strong>
+            <small>programa en tu compu</small>
+          </div>
+          <span class="distinto">≠</span>
+          <div>
+            <svg viewBox="0 0 140 100" aria-hidden="true"><use href="#nube" y="4" width="140" height="90"/></svg>
+            <strong>GitHub</strong>
+            <small>sitio web para compartir</small>
+          </div>
         </div>
-        <p class="nota" style="text-align:center">Git es la cámara · GitHub es el álbum en línea</p>
+        <p class="banda">Git es la <b>cámara</b> · GitHub es el <b>álbum en línea</b></p>
       </section>
 
+      <!-- 5 -->
       <section class="tarjeta">
         <h2><span class="num">5</span> Trabajar en equipo</h2>
-        <p>Ana, Luis y Sofía comparten una <strong>copia en GitHub</strong>.</p>
-        <ul>
-          <li><strong>clone</strong> (1ª vez): copiar el proyecto a tu compu.</li>
-          <li><strong>push ↑</strong>: subir tus fotos a GitHub.</li>
-          <li><strong>pull ↓</strong>: bajar los cambios de los demás.</li>
-        </ul>
+        <svg class="diagrama" viewBox="0 0 400 235" role="img" aria-label="Ana sube con push, Luis baja con pull y Sofía copia con clone desde la copia en GitHub">
+          <use href="#nube" x="140" y="0" width="120" height="78"/>
+          <text x="200" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#4b73e2">copia en GitHub</text>
+          <path d="M70 140L145 70" stroke="#29303e" stroke-width="2.5" marker-end="url(#punta)"/>
+          <text x="20" y="96" font-size="12" class="mono" fill="#29303e">push ↑ subir</text>
+          <path d="M200 100V136" stroke="#29303e" stroke-width="2.5" marker-end="url(#punta)"/>
+          <text x="212" y="124" font-size="12" class="mono" fill="#29303e">pull ↓</text>
+          <path d="M240 82L325 138" stroke="#36ab81" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#punta-verde)"/>
+          <text x="300" y="96" font-size="12" class="mono" fill="#36ab81">clone</text>
+          <text x="300" y="110" font-size="11" fill="#6b6f78">1ª vez</text>
+          <use href="#laptop" x="15" y="148" width="90" height="60" color="#4b73e2"/>
+          <use href="#laptop" x="155" y="148" width="90" height="60" color="#ee6d3c"/>
+          <use href="#laptop" x="295" y="148" width="90" height="60" color="#36ab81"/>
+          <g font-size="13" font-weight="700" text-anchor="middle" fill="#29303e">
+            <text x="60" y="228">Ana</text><text x="200" y="228">Luis</text><text x="340" y="228">Sofía</text>
+          </g>
+        </svg>
       </section>
 
+      <!-- 6 -->
       <section class="tarjeta">
         <h2><span class="num">6</span> Pull Request: proponer un cambio</h2>
         <ol class="pasos">
-          <li>Creas una rama</li>
-          <li>Haces cambios</li>
-          <li>Pides que se sume</li>
-          <li>El equipo revisa</li>
-          <li>Se une a main</li>
+          <li style="--c:var(--naranja)"><b>1</b>Creas<br>una rama</li>
+          <li style="--c:var(--naranja)"><b>2</b>Haces<br>cambios</li>
+          <li style="--c:var(--azul)"><b>3</b>Pides que<br>se sume</li>
+          <li style="--c:var(--azul)"><b>4</b>El equipo<br>revisa</li>
+          <li style="--c:var(--verde)"><b>5</b>Se une<br>a main</li>
         </ol>
-        <p class="nota">Ej.: Luis corrige la bibliografía en su rama y pide sumarla. Ana comenta «falta una cita», Luis la agrega, Ana aprueba ✓ y el cambio entra a la versión principal.</p>
+        <p class="ejemplo">Ej.: Luis corrige la bibliografía en su rama y pide sumarla. Ana comenta «falta una cita», Luis la agrega, Ana aprueba ✓ y el cambio entra a la versión principal.</p>
       </section>
     </div>
 
-    <section class="tarjeta" style="margin-top:16px">
-      <h2>Vocabulario rápido</h2>
-      <dl class="vocab">
-        <div><dt>Repositorio:</dt> <dd>carpeta + toda su historia</dd></div>
-        <div><dt>Commit:</dt> <dd>una foto guardada</dd></div>
-        <div><dt>Rama:</dt> <dd>línea de trabajo paralela</dd></div>
-        <div><dt>Merge:</dt> <dd>unir una rama con otra</dd></div>
-        <div><dt>Push / Pull:</dt> <dd>subir / bajar de GitHub</dd></div>
-        <div><dt>Clone:</dt> <dd>copiar el repo a tu compu</dd></div>
-        <div><dt>Fork:</dt> <dd>tu copia del proyecto de otro</dd></div>
-        <div><dt>Pull Request:</dt> <dd>pedir que sumen tus cambios</dd></div>
-        <div><dt>GitHub Pages:</dt> <dd>publicar una web gratis</dd></div>
-      </dl>
-    </section>
+    <h2 class="vocab-titulo">Vocabulario rápido</h2>
+    <dl class="vocab">
+      <div><dt>Repositorio</dt><dd>· carpeta + toda su historia</dd></div>
+      <div><dt>Commit</dt><dd>· una foto guardada</dd></div>
+      <div style="--c:var(--naranja)"><dt>Rama</dt><dd>· línea de trabajo paralela</dd></div>
+      <div style="--c:var(--verde)"><dt>Merge</dt><dd>· unir una rama con otra</dd></div>
+      <div style="--c:var(--texto)"><dt>Push / Pull</dt><dd>· subir / bajar de GitHub</dd></div>
+      <div style="--c:var(--verde)"><dt>Clone</dt><dd>· copiar el repo a tu compu</dd></div>
+      <div style="--c:var(--naranja)"><dt>Fork</dt><dd>· tu copia del proyecto de otro</dd></div>
+      <div><dt>Pull Request</dt><dd>· pedir que sumen tus cambios</dd></div>
+      <div style="--c:var(--verde)"><dt>GitHub Pages</dt><dd>· publicar una web gratis</dd></div>
+    </dl>
 
-    <section class="tarjeta empezar">
-      <strong>Para empezar sin comandos:</strong>
-      ① cuenta en github.com → ② instala GitHub Desktop → ③ crea tu primer repositorio
-    </section>
+    <p class="empezar">Para empezar sin comandos: ① cuenta en github.com → ② instala GitHub Desktop → ③ crea tu primer repositorio</p>
 
     <div class="centro">
-      <a class="boton" href="cuestionario.html">📝 Ir al cuestionario</a>
+      <a class="boton" href="cuestionario.html">📝&nbsp;Ir al cuestionario</a>
     </div>
   </main>
 </body>

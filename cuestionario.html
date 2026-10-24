@@ -4,31 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cuestionario Git y GitHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="contenedor" style="max-width:700px">
-    <header>
-      <h1>Cuestionario</h1>
-      <p>5 preguntas sobre Git y GitHub</p>
+    <header class="cabecera">
+      <div>
+        <h1>Cuestionario</h1>
+        <p>5 preguntas sobre Git y GitHub</p>
+      </div>
     </header>
 
-    <p class="cronometro">⏱️ Tiempo: <span id="tiempo">0:00</span></p>
+    <p class="cronometro">⏱️&nbsp;Tiempo: <span id="tiempo">0:00</span></p>
 
     <section id="resultado" class="tarjeta resultado">
-      <h2 style="justify-content:center">Resultado</h2>
+      <h2>Resultado</h2>
       <div class="stats">
         <div><strong id="correctas">0/5</strong>correctas</div>
         <div><strong id="intento">1</strong>intento n.º</div>
         <div><strong id="duracion">0:00</strong>tiempo</div>
       </div>
-      <button class="boton" id="reintentar">🔄 Intentar de nuevo</button>
+      <button class="boton" id="reintentar">🔄&nbsp;Intentar de nuevo</button>
     </section>
 
     <form id="cuestionario"></form>
 
     <div class="centro">
-      <button class="boton" id="calificar">✅ Calificar</button>
+      <button class="boton" id="calificar">✅&nbsp;Calificar</button>
       <p><a href="index.html">← Volver a la lectura</a></p>
     </div>
   </main>
