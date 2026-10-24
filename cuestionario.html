@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario Git y GitHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="contenedor" style="max-width:700px">
+    <header>
+      <h1>Cuestionario</h1>
+      <p>5 preguntas sobre Git y GitHub</p>
+    </header>
+
+    <p class="cronometro">⏱️ Tiempo: <span id="tiempo">0:00</span></p>
+
+    <section id="resultado" class="tarjeta resultado">
+      <h2 style="justify-content:center">Resultado</h2>
+      <div class="stats">
+        <div><strong id="correctas">0/5</strong>correctas</div>
+        <div><strong id="intento">1</strong>intento n.º</div>
+        <div><strong id="duracion">0:00</strong>tiempo</div>
+      </div>
+      <button class="boton" id="reintentar">🔄 Intentar de nuevo</button>
+    </section>
+
+    <form id="cuestionario"></form>
+
+    <div class="centro">
+      <button class="boton" id="calificar">✅ Calificar</button>
+      <p><a href="index.html">← Volver a la lectura</a></p>
+    </div>
+  </main>
+
+  <script src="cuestionario.js"></script>
+</body>
+</html>

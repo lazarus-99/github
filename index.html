@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git y GitHub en una página</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="contenedor">
+    <header>
+      <h1>Git y GitHub en una página</h1>
+      <p>Cómo guardar la historia de tu trabajo y colaborar con otros, sin saber programar.</p>
+    </header>
+
+    <div class="grid">
+      <section class="tarjeta">
+        <h2><span class="num">1</span> Git toma «fotos» de tu proyecto: se llaman commits</h2>
+        <p class="etiqueta">Sin Git</p>
+        <div class="chips">
+          <span class="chip malo">tesis_v2.docx</span>
+          <span class="chip malo">final_FINAL(2).docx</span>
+          <span class="chip malo">tesis_FINAL.docx</span>
+        </div>
+        <p class="nota">¿Cuál es la buena? ¿Qué cambió? ¿Quién?</p>
+        <p class="etiqueta">Con Git</p>
+        <div class="foto">Índice listo <small>· Ana · lun</small></div>
+        <div class="foto">Cap. 1 <small>· Ana · lun</small></div>
+        <div class="foto">Gráficos <small>· Luis · mar</small></div>
+        <p class="nota">🎮 Como «guardar partida»: ¿salió mal? Vuelves a cualquier foto anterior.</p>
+      </section>
+
+      <section class="tarjeta">
+        <h2><span class="num">2</span> Cómo se toma una foto: elegir y luego disparar</h2>
+        <div class="flujo">
+          <span class="caja"><strong>Tu carpeta</strong><br>donde trabajas</span>
+          <span class="flecha">→</span>
+          <span class="caja"><strong>Preparado</strong><br>lo que entra en la foto</span>
+          <span class="flecha">→</span>
+          <span class="caja"><strong>Historial</strong><br>fotos guardadas</span>
+        </div>
+        <p><code>git add</code> → elegir<br><code>git commit</code> → tomar la foto</p>
+        <p class="nota">El borrador que no eliges queda afuera de la foto.</p>
+      </section>
+
+      <section class="tarjeta">
+        <h2><span class="num">3</span> Ramas: experimentar sin miedo</h2>
+        <p class="etiqueta">main (versión principal)</p>
+        <div class="chips">
+          <span class="chip">Índice</span>
+          <span class="chip">Cap. 1</span>
+          <span class="chip verde">← merge</span>
+        </div>
+        <p class="etiqueta">rama: probando una idea</p>
+        <div class="chips">
+          <span class="chip naranja">Gráficos</span>
+          <span class="chip naranja">Citas</span>
+        </div>
+        <p class="nota">Si la idea funciona, la unes a <strong>main</strong> con un <em>merge</em>. Si no, la descartas y main queda intacta.</p>
+      </section>
+
+      <section class="tarjeta">
+        <h2><span class="num">4</span> Git y GitHub no son lo mismo</h2>
+        <div class="comparar">
+          <div class="caja"><strong>Git</strong>programa en tu compu</div>
+          <span class="igual">≠</span>
+          <div class="caja"><strong>GitHub</strong>sitio web para compartir</div>
+        </div>
+        <p class="nota" style="text-align:center">Git es la cámara · GitHub es el álbum en línea</p>
+      </section>
+
+      <section class="tarjeta">
+        <h2><span class="num">5</span> Trabajar en equipo</h2>
+        <p>Ana, Luis y Sofía comparten una <strong>copia en GitHub</strong>.</p>
+        <ul>
+          <li><strong>clone</strong> (1ª vez): copiar el proyecto a tu compu.</li>
+          <li><strong>push ↑</strong>: subir tus fotos a GitHub.</li>
+          <li><strong>pull ↓</strong>: bajar los cambios de los demás.</li>
+        </ul>
+      </section>
+
+      <section class="tarjeta">
+        <h2><span class="num">6</span> Pull Request: proponer un cambio</h2>
+        <ol class="pasos">
+          <li>Creas una rama</li>
+          <li>Haces cambios</li>
+          <li>Pides que se sume</li>
+          <li>El equipo revisa</li>
+          <li>Se une a main</li>
+        </ol>
+        <p class="nota">Ej.: Luis corrige la bibliografía en su rama y pide sumarla. Ana comenta «falta una cita», Luis la agrega, Ana aprueba ✓ y el cambio entra a la versión principal.</p>
+      </section>
+    </div>
+
+    <section class="tarjeta" style="margin-top:16px">
+      <h2>Vocabulario rápido</h2>
+      <dl class="vocab">
+        <div><dt>Repositorio:</dt> <dd>carpeta + toda su historia</dd></div>
+        <div><dt>Commit:</dt> <dd>una foto guardada</dd></div>
+        <div><dt>Rama:</dt> <dd>línea de trabajo paralela</dd></div>
+        <div><dt>Merge:</dt> <dd>unir una rama con otra</dd></div>
+        <div><dt>Push / Pull:</dt> <dd>subir / bajar de GitHub</dd></div>
+        <div><dt>Clone:</dt> <dd>copiar el repo a tu compu</dd></div>
+        <div><dt>Fork:</dt> <dd>tu copia del proyecto de otro</dd></div>
+        <div><dt>Pull Request:</dt> <dd>pedir que sumen tus cambios</dd></div>
+        <div><dt>GitHub Pages:</dt> <dd>publicar una web gratis</dd></div>
+      </dl>
+    </section>
+
+    <section class="tarjeta empezar">
+      <strong>Para empezar sin comandos:</strong>
+      ① cuenta en github.com → ② instala GitHub Desktop → ③ crea tu primer repositorio
+    </section>
+
+    <div class="centro">
+      <a class="boton" href="cuestionario.html">📝 Ir al cuestionario</a>
+    </div>
+  </main>
+</body>
+</html>
